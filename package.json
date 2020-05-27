@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/AVG1525/nodejs-redis-viacep#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "redis": "^3.0.2"
   }
