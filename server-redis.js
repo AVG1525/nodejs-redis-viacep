@@ -1,6 +1,8 @@
 const express = require('express')
-const app = express()
 const redis = require('redis')
+const axios = require('axios')
+
+const app = express()
 const redisClient = redis.createClient();
 
 const port = 3000
@@ -31,9 +33,13 @@ const setCacheRedis = (key, value) => {
 
 
 const dbViaCep = (id) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => resolve(true))
+    return axios({
+        method: 'get',
+        url: 'https://viacep.com.br/ws/'+id+'/piped/',
+        responseType: 'json'
     })
+    .then((res) => { return res })
+    .catch((res) => { return null })
 }
 
 app.get('/', (request, response) => {
@@ -48,11 +54,10 @@ app.get('/get/:id', async(request, response) => {
     if(value){
         response.send('Return from cache: ' + value)
     } else {
-        /*const idValue = await dbViaCep(id)
+        const idValue = await dbViaCep(id)
         await setCacheRedis('get'+id, idValue)
 
-        response.send('Return from ViaCep: ' + idValue)*/
-        response.send('NULL')
+        response.send('Return from ViaCep: ' + idValue)
     }
 })
 
