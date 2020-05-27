@@ -54,10 +54,14 @@ app.get('/get/:id', async(request, response) => {
     if(value){
         response.send('Return from cache: ' + value)
     } else {
-        const idValue = await dbViaCep(id)
-        await setCacheRedis('get'+id, idValue)
+        try {
+            const idValue = await dbViaCep(id)
+            await setCacheRedis('get'+id, idValue)
 
-        response.send('Return from ViaCep: ' + idValue)
+            response.send('Return from ViaCep: ' + idValue)
+        } catch {
+            response.send('Cep not exist')
+        }
     }
 })
 
