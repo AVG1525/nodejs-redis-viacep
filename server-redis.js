@@ -51,4 +51,5 @@ app.get('/get/:id', async(request, response) => {
     }
 })
 
+app.listen(port, () => console.log('running...'))
 
