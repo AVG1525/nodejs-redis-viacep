@@ -1,5 +1,5 @@
 # nodejs-redis-viacep
-[![npx](https://www.npmjs.com/package/npx)](https://www.npmjs.com/package/npx)
+[![Gitter](https://img.shields.io/badge/chat-on%20gitter-yellow.svg)](https://gitter.im/Microsoft/vscode)
 Esse projeto é composto pelas seguintes ferramentas
  - [Redis](https://github.com/NodeRedis/node-redis)
  - [Express](https://github.com/expressjs/express)
