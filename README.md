@@ -5,12 +5,12 @@ This project consists of the following tools:
  - [Axios](https://github.com/axios/axios)
  - [NodeJs](https://github.com/nodejs/node)
 
-## Installing Tools
-Npm (Example Debian):
+## Installing Tools (Example in Debian)
+Npm:
 ```npm
     apt-get install npm 
 ```
-Node (Example Debian):
+Node:
 ```npm
     apt-get install -y nodejs 
 ```
@@ -22,5 +22,5 @@ Using npm:
 ```
 
 ## Start
-Run `node server-redis.js` for server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
+Run `node server-redis.js`. Navigate to `http://localhost:3000/`.
 
