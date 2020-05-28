@@ -23,7 +23,7 @@ const setCacheRedis = (key, value) => {
     return new Promise((resolve, reject) => {
         redisClient.set(key, value, (err) => {
             if(err){
-                resolve(err)
+                reject(err)
             } else {
                 resolve(true)
             }
