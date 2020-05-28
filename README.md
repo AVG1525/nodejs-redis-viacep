@@ -6,9 +6,9 @@ Esse projeto é composto pelas seguintes ferramentas
  - [NodeJs](https://github.com/nodejs/node)
 
 ## Install
-'''javascript
+```js
     npm install
-'''
+```
 
 ## Start
 
