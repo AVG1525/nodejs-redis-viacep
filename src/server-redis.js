@@ -17,7 +17,7 @@ const getCacheRedis = (key) => {
             }
         })
     })
-}
+}   
 
 const setCacheRedis = (key, value) => {
     return new Promise((resolve, reject) => {
