@@ -21,6 +21,16 @@ Using npm:
     npm install
 ```
 
+## Routes (GET)
+Return 'OK':
+```txt
+    http://localhost:3000/
+```
+Return 'CEP':
+```txt
+    http://localhost:3000/get/:cep
+```
+
 ## Start
 Run `node server-redis.js`. Navigate to `http://localhost:3000/`.
 
