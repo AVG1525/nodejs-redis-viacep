@@ -17,7 +17,7 @@ const getCacheRedis = (key) => {
             }
         })
     })
-}
+}   
 
 const setCacheRedis = (key, value) => {
     return new Promise((resolve, reject) => {
@@ -55,13 +55,13 @@ app.get('/get/:id', async(request, response) => {
         let idValue = await dbViaCep(id)
         if(idValue != null){
             await setCacheRedis(key, idValue)
-            response.send('Return from ViaCep: ' + idValue)
+            response.send('Return from ViaCEP: ' + idValue)
         }
-        else response.send('Cep not exist')
+        else response.send('CEP not exist')
     }
 })
 
 app.listen(port, () => console.log('\nRunning:\n\t - Express\n\t - Redis\n\t - Axios'))
 redisClient.on('error', (error) => {
-    console.log('Something went wrong: ' + error)
+    console.log('Error in Redis: ' + error)
 })

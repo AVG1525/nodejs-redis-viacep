@@ -3,7 +3,7 @@ This project consists of the following tools:
  - [Redis](https://github.com/NodeRedis/node-redis)
  - [Express](https://github.com/expressjs/express)
  - [Axios](https://github.com/axios/axios)
- - [NodeJs](https://github.com/nodejs/node)
+ - [NodeJS](https://github.com/nodejs/node)
 
 ## Installing Tools (Example in Debian)
 Npm:
@@ -19,6 +19,16 @@ Node:
 Using npm:
 ```npm
     npm install
+```
+
+## Routes (GET)
+Return 'OK':
+```txt
+    http://localhost:3000/
+```
+Return 'CEP':
+```txt
+    http://localhost:3000/get/:cep
 ```
 
 ## Start
