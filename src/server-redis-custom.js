@@ -105,7 +105,7 @@ app.get('/get/:id', async(request, response) => {
         axios.get(
             'https://viacep.com.br/ws/'+id+'/json/', 
             { httpsAgent }
-        ).then((res) => { 
+        ).then((res) => {
             var idValue = JSON.stringify(res.data)
             console.log("RESP -IdValue: " + idValue)
 
