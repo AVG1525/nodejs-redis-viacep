@@ -1,1 +1,26 @@
 # nodejs-redis-viacep
+This project consists of the following tools:
+ - [Redis](https://github.com/NodeRedis/node-redis)
+ - [Express](https://github.com/expressjs/express)
+ - [Axios](https://github.com/axios/axios)
+ - [NodeJs](https://github.com/nodejs/node)
+
+## Installing Tools (Example in Debian)
+Npm:
+```npm
+    apt-get install npm 
+```
+Node:
+```npm
+    apt-get install -y nodejs 
+```
+
+## Installing Project
+Using npm:
+```npm
+    npm install
+```
+
+## Start
+Run `node server-redis.js`. Navigate to `http://localhost:3000/`.
+
